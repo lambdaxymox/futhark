@@ -1953,6 +1953,7 @@ funcall desc (QualName _ fname) args loc = do
   let diets =
         replicate (length shapeargs) I.ObservePrim
           ++ map I.diet value_paramts
+
   args' <-
     ensureArgShapes
       "function arguments of wrong shape"
